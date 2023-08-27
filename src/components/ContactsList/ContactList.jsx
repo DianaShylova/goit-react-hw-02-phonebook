@@ -1,10 +1,11 @@
+import css from "./ContactList.module.css"
 export function ContactList({ contacts, onDeleteContact }) {
   return (
-    <ul>
+    <ul className={css.contact_list}>
       {contacts.map(contact => (
-        <li key={contact.id}>
+        <li className={css.contact_list_item} key={contact.id}>
           {contact.name}:{contact.number}
-          <button onClick={() => onDeleteContact(contact.id)} type="button">
+          <button className={css.contact_btn} onClick={() => onDeleteContact(contact.id)} type="button">
             Delete
           </button>
         </li>

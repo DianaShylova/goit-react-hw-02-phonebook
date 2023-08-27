@@ -11,13 +11,14 @@
 .contact_list_item {
     display: flex;
     align-items: center;
-    width: 370px;
+    width: 100%;
     justify-content: space-between;
 }
 
 .contact_btn {
     padding: 5px 20px;
-    color: #333340;
-    border: 1px solid #333340;
+    color: #fff;
+    border: 1px solid rgb(0 153 153);
+    background-color: rgb(102 204 204);
     border-radius: 5px;
 }

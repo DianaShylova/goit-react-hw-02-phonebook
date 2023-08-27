@@ -2,26 +2,33 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    
 }
-
-.submit_title {
+.name_title,
+.number_title {
+    color: rgb(0 153 153);
     margin: 10px;
     display: flex;
     flex-direction: column;
     align-items: center;
+   
 }
-
-.submit_form_btn {
+.shape_input{
+    border: 1px solid rgb(0 153 153);
+    border-radius: 3px;
+}
+.add_contact_btn {
     margin-top: 20px;
     width: 100px;
     height: 25px;
-    color: #333340;
-    border: 1px solid #333340;
+    color: #fff;
+    border: 1px solid rgb(0 153 153);
+    background-color: rgb(102 204 204);
     border-radius: 5px;
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 280px;
+    
     height: 35px;
 }
 
