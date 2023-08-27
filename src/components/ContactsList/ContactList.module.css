@@ -1,0 +1,23 @@
+.contact_list {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+    padding: 0 20px;
+    list-style: none;
+    align-items: center;
+}
+
+.contact_list_item {
+    display: flex;
+    align-items: center;
+    width: 370px;
+    justify-content: space-between;
+}
+
+.contact_btn {
+    padding: 5px 20px;
+    color: #333340;
+    border: 1px solid #333340;
+    border-radius: 5px;
+}

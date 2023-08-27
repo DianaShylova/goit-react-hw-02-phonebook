@@ -1,0 +1,32 @@
+.submit_form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.submit_title {
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.submit_form_btn {
+    margin-top: 20px;
+    width: 100px;
+    height: 25px;
+    color: #333340;
+    border: 1px solid #333340;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 280px;
+    height: 35px;
+}
+
+.submit_form_input {
+    height: 35px;
+    width: 270px;
+
+}
