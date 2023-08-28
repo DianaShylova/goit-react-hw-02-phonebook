@@ -7,11 +7,11 @@ export class ContactForm extends Component {
     number: '',
   };
 
-  handelChange = e => {
+  handleChange = e => {
     this.setState({ [e.target.name]: e.target.value });
   };
 
-  handelSubmit = e => {
+  handleSubmit = e => {
     e.preventDefault();
     const { name, number } = this.state;
     this.props.onAddContact(name, number);
@@ -21,10 +21,10 @@ export class ContactForm extends Component {
   render() {
     const { name, number } = this.state;
     return (
-      <form className={css.submit_form} onSubmit={this.handelSubmit}>
+      <form className={css.submit_form} onSubmit={this.handleSubmit}>
         <h3 className={css.name_title}>Name</h3>
         <input className={css.shape_input}
-          onChange={this.handelChange}
+          onChange={this.handleChange}
           value={name}
           type="text"
           name="name"
@@ -34,7 +34,7 @@ export class ContactForm extends Component {
         />
         <h3 className={css.number_title}>Number</h3>
         <input className={css.shape_input}
-          onChange={this.handelChange}
+          onChange={this.handleChange}
           value={number}
           type="tel"
           name="number"

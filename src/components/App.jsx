@@ -11,8 +11,8 @@ export class App extends Component {
     filter: '',
   };
 
-  handelAddContact = (name, number) => {
-    if (this.state.contacts.find(contact => contact.name === name)) {
+  handleAddContact = (name, number) => {
+    if (this.state.contacts.find(contact => contact.name.toLowerCase() === name.toLowerCase())) {
       alert(`${name} is already in contacts`);
       return;
     }
@@ -28,11 +28,11 @@ export class App extends Component {
     );
   };
 
-  handelChangeFilter = e => {
+  handleChangeFilter = e => {
     this.setState({ filter: e.target.value });
   };
 
-  handelDeleteContact = id => {
+  handleDeleteContact = id => {
     this.setState(prevState => ({
       contacts: prevState.contacts.filter(contact => contact.id !== id),
     }));
@@ -42,17 +42,17 @@ export class App extends Component {
     return (
       <div className={css.container}>
         <h1 className={css.title}>Phonebook</h1>
-        <ContactForm onAddContact={this.handelAddContact} />
+        <ContactForm onAddContact={this.handleAddContact} />
 
         <h2 className={css.title}>Contacts</h2>
         <p className={css.filter_title}>Find contacts by name</p>
         <Filter
-          onChangeFilter={this.handelChangeFilter}
+          onChangeFilter={this.handleChangeFilter}
           filter={this.state.filter}
         />
         <ContactList
           contacts={this.applyFilter()}
-          onDeleteContact={this.handelDeleteContact}
+          onDeleteContact={this.handleDeleteContact}
         />
       </div>
     );
